@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@300;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,500;1,700&family=Tajawal:wght@200;300;400;500;800;900&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+     <!-- icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="bg-transparent navbar-blur border-b border-white/10 pt-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center text-white font-semibold text-2xl">
+                        <i class="fa-solid fa-film mr-2 text-5xl"></i>
+                        Movies
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+              <div class="hidden md:block ">
+  <div class="ml-10 flex items-baseline space-x-20">
+    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+      Home
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
+    </a>
+    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+      Movies
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
+    </a>
+    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+      Coming Soon
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
+    </a>
+    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+      Newsletter
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
+    </a>
+  </div>
+</div>
+
+                
+                <!-- Sign In Button -->
+                <div class="hidden md:block">
+                    <button class="bg-[#F92B20] hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-300">
+                        Sign In
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <label for="mobile-menu-toggle" class="text-white/80 hover:text-white focus:outline-none focus:text-white cursor-pointer">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden checkbox for mobile menu toggle -->
+        <input type="checkbox" id="mobile-menu-toggle" class="hidden peer">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden peer-checked:block md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 navbar-blur">
+                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Home</a>
+                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Movies</a>
+                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Coming Soon</a>
+                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Newsletter</a>
+                <div class="px-3 py-2">
+                    <button class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-5 rounded transition-colors duration-300">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+           <div class="w-full md:w-[75%] flex flex-col justify-center items-start h-screen pt-20  md:pb-20 px-6 md:px-12 lg:px-20 text-white space-y-4">
+                <h3 class="text-black font-semibold">MARVEL UNIVERSE</h3>
+                <h1 class="text-7xl font-bold">Spider-Man <br> <span>Far From Home</span></h1>
+                    <button class="bg-[#F92B20] hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-300">
+                        Book Now
+                    </button>
+
+            </div>
+    </nav>
+    
+    <!-- Demo content to show the transparent effect -->
+  <div class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
+  <div class="w-full md:w-[85%] flex flex-col justify-start items-start mx-auto">
+    <h2 class="text-white text-lg font-weight-[500] uppercase">OPENING THIS WEEK</h2>
+    <div class="border-b border-red-600 w-full"></div>
+    
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
+      <!-- Box 1 -->
+      <div class=" rounded-lg overflow-hidden shadow-lg">
+        <img src="img/m1.jpg" alt="Venom" class="w-full md:h-64 object-cover">
+        <div class="p-2">
+          <h3 class="text-[#E9291D] text-sm font-semibold ">Venom</h3>
+            <span class="text-white text-sm text-sm">120min | Action</span>
+        </div>
+      </div>
+        <!-- Box 2 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m2.jpg" alt="Dunkerk" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Dunkerk</h3>
+            <span class="text-white text-sm">105min | Adventure</span>
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m3.jpg" alt="Batman & Superman" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Batman & Superman</h3>
+            <span class="text-white text-sm">100min | Thriller</span>
+          </div>
+        </div>
+        <!-- Box 4 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m4.jpg" alt="John Wick" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">John Wick</h3>
+            <span class="text-white text-sm">120min | Adventure</span>
+          </div>
+        </div>
+                <!-- Box 5 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m5.jpg" alt="Aquaman" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Aquaman</h3>
+            <span class="text-white text-sm">130min | Action</span>
+          </div>
+        </div>
+                <!-- Box 6 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m6.jpg" alt="Black Panther" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Black Panther</h3>
+            <span class="text-white text-sm">90min | Thriller</span>
+          </div>
+        </div>
+                <!-- Box 7 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m7.jpg" alt="Thor" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Thor</h3>
+            <span class="text-white text-sm">130min | Action</span>
+          </div>
+        </div>
+
+        <!-- Box 8 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m8.png" alt="Bumblebee" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Bumblebee</h3>
+            <span class="text-white text-sm">100min | Action</span>
+          </div>
+        </div>
+
+        <!-- Box 9 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m9.jpg" alt="Mortal Engines" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Mortal Engines</h3>
+            <span class="text-white text-sm">100min | Action</span>
+          </div>
+        </div>
+
+        <!-- Box 10 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/m10.jpg" alt="UnderWorld Blood Wars" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">UnderWorld Blood Wars</h3>
+            <span class="text-white text-sm">100min | Action</span>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
+          <div class="w-full md:w-[85%] flex flex-col justify-start items-start mx-auto">
+            <h2 class="text-white text-lg font-weight-[500] uppercase">COMING SOON</h2>
+            <div class="border-b border-red-600 w-full"></div>
+
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
+      <!-- Box 1 -->
+      <div class=" rounded-lg overflow-hidden shadow-lg">
+        <img src="img/coming1.jpg" alt="Joney English" class="w-full md:h-64 object-cover">
+        <div class="p-2">
+          <h3 class="text-[#E9291D] text-sm font-semibold ">Johnny English</h3>
+            <span class="text-white text-sm text-sm">80min | Comedy</span>
+        </div>
+      </div>
+        <!-- Box 2 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming2.jpg" alt="WarCrafet" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">WarCrafet</h3>
+            <span class="text-white text-sm">120min | Action</span>
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming3.jpg" alt="Rampage" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Rampage</h3>
+            <span class="text-white text-sm">108min | Adventure</span>
+          </div>
+        </div>
+        <!-- Box 4 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming4.jpg" alt="Airon Lady" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Airon Lady</h3>
+            <span class="text-white text-sm">120min | Comedy</span>
+          </div>
+        </div>
+                <!-- Box 5 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming5.jpg" alt="Justice League" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Justice League</h3>
+            <span class="text-white text-sm">120min | Adventure</span>
+          </div>
+        </div>
+                <!-- Box 6 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming6.jpEg" alt="Doctor Strange" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Doctor Strange</h3>
+            <span class="text-white text-sm">120min | Adventure</span>
+          </div>
+        </div>
+                <!-- Box 7 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming7.jpg" alt="Captain Marvel" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Captain Marvel</h3>
+            <span class="text-white text-sm">120min | Adventure</span>
+          </div>
+        </div>
+
+        <!-- Box 8 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming8.jpg" alt="Black Widow" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Black Widow</h3>
+            <span class="text-white text-sm">90min | Action</span>
+          </div>
+        </div>
+
+        <!-- Box 9 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming9.jpg" alt="Ant Man" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Ant Man</h3>
+            <span class="text-white text-sm">110min | Adventure</span>
+          </div>
+        </div>
+
+        <!-- Box 10 -->
+        <div class=" rounded-lg overflow-hidden shadow-lg">
+          <img src="img/coming10.jpg" alt="Guardiance Of The Galaxy" class="w-full md:h-64 object-cover">
+          <div class="p-2">
+            <h3 class="text-[#E9291D] text-sm font-semibold ">Guardiance Of The Galaxy</h3>
+            <span class="text-white text-sm">120min | Adventure</span>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+         <!-- Main Content Area -->
+    <div class="flex-1 flex items-center justify-center px-4 py-16 bg-black">
+        <div class="text-center max-w-md w-full">
+            <!-- Newsletter Title -->
+            <h2 class="text-xl md:text-2xl text-white font-bold mb-8 leading-tight">
+                Subscribe To Get<br>Newsletter
+            </h2>
+            
+            <!-- Email Subscription Form -->
+    <div class="max-w-md mx-auto">
+        <div class="flex items-center bg-white rounded overflow-hidden">
+            <input 
+                type="email" 
+                placeholder="Enter Email..." 
+                class="flex-1 px-4 py-3 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none"
+            />
+            <button class="px-8 py-3 bg-[#F92B20] hover:bg-red-700 text-white font-semibold transition-colors duration-300">
+                SUBSCRIBE
+            </button>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="px-4 py-8 bg-black ">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- Movies Logo -->
+            <div class="flex items-center">
+                    <a href="#" class="flex items-center text-white font-semibold text-2xl">
+                        <i class="fa-solid fa-film mr-2 text-[#E9291D] text-4xl"></i>
+                        Movies
+                    </a>
+                </div>
+            
+            <!-- Social Media Icons -->
+            <div class="flex gap-4">
+                <!-- Facebook -->
+                <div class="w-12 h-12 bg-white rounded-full  bg-gray-500 border-4 border-gray-600 flex items-center justify-center hover:bg-gray-900 transition-colors cursor-pointer">
+                    <i class="fab fa-facebook-f  text-[#E9291D] text-xl"></i>
+                </div>
+                
+                <!-- Instagram -->
+                <div class="w-12 h-12 bg-white rounded-full bg-gray-500 border-4 border-gray-600 flex items-center justify-center hover:bg-gray-900 transition-colors cursor-pointer">
+                    <i class="fab fa-instagram text-[#E9291D] text-xl"></i>
+                </div>
+                
+                <!-- Twitter -->
+                <div class="w-12 h-12 bg-white rounded-full bg-gray-500 border-4 border-gray-600 flex items-center justify-center hover:bg-gray-900 transition-colors cursor-pointer">
+                    <i class="fab fa-twitter text-[#E9291D] text-xl"></i>
+                </div>
+                
+                <!-- TikTok -->
+                <div class="w-12 h-12 bg-white rounded-full bg-gray-500 border-4 border-gray-600  flex items-center justify-center hover:bg-gray-900 transition-colors cursor-pointer">
+                    <i class="fab fa-tiktok text-[#E9291D] text-xl"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="text-center text-lg mt-8 pt-6 ">
+            <p class="text-white">
+                © <span class="text-red-500 font-semibold">Dev Wave</span> All Right Reserved.
+            </p>
+        </div>
+    </footer>
+        
+</body>
+</html>
