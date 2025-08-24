@@ -2,16 +2,18 @@
             min-height: 100vh;
             font-family: Poppins, sans-serif !important;
             line-height: 24px !important;
-             scroll-behavior: smooth; 
-
+            scroll-behavior: smooth; 
         }
      
-        
         .home {
           background-image: url(../img/home3.jpg);
           background-size: cover;
           background-position: center;
           height: 100vh;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+
+        html {
+            scroll-padding-top: 4rem;
         }
