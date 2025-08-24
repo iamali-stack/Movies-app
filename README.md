@@ -11,8 +11,6 @@ A modern, responsive movies website built with HTML, TailwindCSS, and Font Aweso
 - 🎬 Current Movies Showcase
 - 🔜 Coming Soon Section
 - 📨 Newsletter Subscription
-- 🎯 No JavaScript Dependencies
-- 🌙 Dark Theme
 - 🎨 Modern UI/UX
 
 ## Technologies Used
