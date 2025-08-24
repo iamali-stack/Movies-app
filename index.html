@@ -285,26 +285,27 @@
         </div>
 
          <!-- Main Content Area -->
-    <div id="newsletter" class="flex-1 flex items-center justify-center px-4 py-16 bg-black">
-        <div class="text-center max-w-md w-full">
+    <div id="newsletter" class="min-h-[300px] w-full flex items-center justify-center px-4 py-16 bg-black">
+        <div class="text-center w-full max-w-md mx-auto">
             <!-- Newsletter Title -->
             <h2 class="text-xl md:text-2xl text-white font-bold mb-8 leading-tight">
                 Subscribe To Get<br>Newsletter
             </h2>
             
             <!-- Email Subscription Form -->
-    <div class="max-w-md mx-auto">
-        <div class="flex items-center bg-white rounded overflow-hidden">
-            <input 
-                type="email" 
-                placeholder="Enter Email..." 
-                class="flex-1 px-4 py-3 bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none"
-            />
-            <button class="px-8 py-3 bg-[#F92B20] hover:bg-red-700 text-white font-semibold transition-colors duration-300">
-                SUBSCRIBE
-            </button>
-        </div>
-    </div>
+            <form class="w-full">
+                <div class="flex flex-row items-stretch bg-white rounded-md overflow-hidden">
+                    <input 
+                        type="email" 
+                        placeholder="Enter Email..." 
+                        class="grow min-w-0 px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none"
+                        required
+                    />
+                    <button type="submit" class="shrink-0 px-8 py-3 bg-[#F92B20] hover:bg-red-700 text-white font-semibold transition-colors duration-300">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
     
