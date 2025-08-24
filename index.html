@@ -23,7 +23,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Brand -->
                 <div class="movies flex items-center">
-                    <a href="#" class="flex items-center text-white font-semibold text-2xl">
+                    <a href="#home" class="flex items-center text-white font-semibold text-2xl">
                         <i class="fa-solid fa-film mr-2 text-5xl"></i>
                         Movies
                     </a>
@@ -60,7 +60,7 @@
                 </div>
                 
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
+                <div class="md:hidden ">
                     <label for="mobile-menu-toggle" class="text-white/80 hover:text-white focus:outline-none focus:text-white cursor-pointer">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -74,12 +74,12 @@
         <input type="checkbox" id="mobile-menu-toggle" class="hidden peer">
         
         <!-- Mobile Navigation Menu -->
-        <div class="hidden peer-checked:block md:hidden">
+        <div class=" hidden peer-checked:block md:hidden bg-white ">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
-                <a href="#home" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Home</a>
-                <a href="#movies" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Movies</a>
-                <a href="#coming-soon" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Coming Soon</a>
-                <a href="#newsletter" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Newsletter</a>
+                <a href="#home" class="text-[#F92B20] hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Home</a>
+                <a href="#movies" class="text-[#F92B20] hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Movies</a>
+                <a href="#coming-soon" class="text-[#F92B20] hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Coming Soon</a>
+                <a href="#newsletter" class="text-[#F92B20] hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Newsletter</a>
                 <div class="px-3 py-2">
                     <button class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-5 rounded transition-colors duration-300">
                         Sign In
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>    </nav>
-           <div id="home" class="home w-full md:w-[100%] flex flex-col justify-center items-start h-screen pt-20  md:pb-20 px-6 md:px-12 lg:px-20 text-white space-y-4">
+           <div id="home" class="home w-full md:w-[100%] flex flex-col justify-end items-start h-screen pb-10  md:pb-20 px-6 md:px-12 lg:px-20 text-white space-y-4">
                 <h3 class="text-black font-semibold">MARVEL UNIVERSE</h3>
                 <h1 class="text-7xl font-bold">Spider-Man <br> <span>Far From Home</span></h1>
                     <button class="bg-[#F92B20] hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-300">
@@ -363,6 +363,11 @@
                 moviesText.classList.remove('text-white');
                 moviesText.classList.add('text-black');
                 
+                // Change mobile toggle button color
+                const mobileToggle = document.querySelector('label[for="mobile-menu-toggle"]');
+                mobileToggle.classList.remove('text-white/80', 'hover:text-white');
+                mobileToggle.classList.add('text-black/80', 'hover:text-black');
+
                 // Change navigation links color
                 navLinks.forEach(link => {
                     link.classList.remove('text-[#F92B20]');
@@ -373,6 +378,11 @@
                 nav.classList.add('bg-transparent');
                 moviesText.classList.remove('text-black');
                 moviesText.classList.add('text-white');
+                
+                // Restore mobile toggle button color
+                const mobileToggle = document.querySelector('label[for="mobile-menu-toggle"]');
+                mobileToggle.classList.remove('text-black/80', 'hover:text-black');
+                mobileToggle.classList.add('text-white/80', 'hover:text-white');
                 
                 // Restore navigation links color
                 navLinks.forEach(link => {
