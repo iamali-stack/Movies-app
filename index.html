@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="bg-transparent navbar-blur border-b border-white/10 pt-3">
+    <nav id="mainNav" class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Brand -->
-                <div class="flex items-center">
+                <div class="movies flex items-center">
                     <a href="#" class="flex items-center text-white font-semibold text-2xl">
                         <i class="fa-solid fa-film mr-2 text-5xl"></i>
                         Movies
@@ -32,19 +32,19 @@
                 <!-- Desktop Navigation -->
               <div class="hidden md:block ">
   <div class="ml-10 flex items-baseline space-x-20">
-    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+    <a href="#home" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
       Home
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
     </a>
-    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+    <a href="#movies" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
       Movies
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
     </a>
-    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+    <a href="#coming-soon" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
       Coming Soon
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
     </a>
-    <a href="#" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
+    <a href="#newsletter" class="relative group text-[#F92B20]  font-medium transition-colors duration-1000">
       Newsletter
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#F92B20] transition-all duration-1000 group-hover:w-full"></span>
     </a>
@@ -75,19 +75,19 @@
         
         <!-- Mobile Navigation Menu -->
         <div class="hidden peer-checked:block md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 navbar-blur">
-                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Home</a>
-                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Movies</a>
-                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Coming Soon</a>
-                <a href="#" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Newsletter</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
+                <a href="#home" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Home</a>
+                <a href="#movies" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Movies</a>
+                <a href="#coming-soon" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Coming Soon</a>
+                <a href="#newsletter" class="text-white/80 hover:text-white block px-3 py-2 font-medium transition-colors duration-300">Newsletter</a>
                 <div class="px-3 py-2">
                     <button class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-5 rounded transition-colors duration-300">
                         Sign In
                     </button>
                 </div>
             </div>
-        </div>
-           <div class="w-full md:w-[75%] flex flex-col justify-center items-start h-screen pt-20  md:pb-20 px-6 md:px-12 lg:px-20 text-white space-y-4">
+        </div>    </nav>
+           <div id="home" class="home w-full md:w-[100%] flex flex-col justify-center items-start h-screen pt-20  md:pb-20 px-6 md:px-12 lg:px-20 text-white space-y-4">
                 <h3 class="text-black font-semibold">MARVEL UNIVERSE</h3>
                 <h1 class="text-7xl font-bold">Spider-Man <br> <span>Far From Home</span></h1>
                     <button class="bg-[#F92B20] hover:bg-red-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-300">
@@ -95,10 +95,10 @@
                     </button>
 
             </div>
-    </nav>
+
     
     <!-- Demo content to show the transparent effect -->
-  <div class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
+  <div id="movies" class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
   <div class="w-full md:w-[85%] flex flex-col justify-start items-start mx-auto">
     <h2 class="text-white text-lg font-weight-[500] uppercase">OPENING THIS WEEK</h2>
     <div class="border-b border-red-600 w-full"></div>
@@ -191,14 +191,14 @@
         </div>
         </div>
 
-        <div class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
+        <div id="coming-soon" class="w-full h-100vh bg-black text-white p-10 md:p-20 ">
           <div class="w-full md:w-[85%] flex flex-col justify-start items-start mx-auto">
             <h2 class="text-white text-lg font-weight-[500] uppercase">COMING SOON</h2>
             <div class="border-b border-red-600 w-full"></div>
 
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
       <!-- Box 1 -->
-      <div class=" rounded-lg overflow-hidden shadow-lg">
+      <div id="#coming-soon" class=" rounded-lg overflow-hidden shadow-lg">
         <img src="img/coming1.jpg" alt="Joney English" class="w-full md:h-64 object-cover">
         <div class="p-2">
           <h3 class="text-[#E9291D] text-sm font-semibold ">Johnny English</h3>
@@ -285,7 +285,7 @@
         </div>
 
          <!-- Main Content Area -->
-    <div class="flex-1 flex items-center justify-center px-4 py-16 bg-black">
+    <div id="newsletter" class="flex-1 flex items-center justify-center px-4 py-16 bg-black">
         <div class="text-center max-w-md w-full">
             <!-- Newsletter Title -->
             <h2 class="text-xl md:text-2xl text-white font-bold mb-8 leading-tight">
@@ -350,6 +350,37 @@
             </p>
         </div>
     </footer>
+    
+    <script>
+        const nav = document.getElementById('mainNav');
+        const moviesText = document.querySelector('.movies a');
+        const navLinks = document.querySelectorAll('.ml-10 a');
         
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-white', 'shadow-lg');
+                nav.classList.remove('bg-transparent');
+                moviesText.classList.remove('text-white');
+                moviesText.classList.add('text-black');
+                
+                // Change navigation links color
+                navLinks.forEach(link => {
+                    link.classList.remove('text-[#F92B20]');
+                    link.classList.add('text-black');
+                });
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+                nav.classList.add('bg-transparent');
+                moviesText.classList.remove('text-black');
+                moviesText.classList.add('text-white');
+                
+                // Restore navigation links color
+                navLinks.forEach(link => {
+                    link.classList.remove('text-black');
+                    link.classList.add('text-[#F92B20]');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

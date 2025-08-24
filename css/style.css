@@ -2,12 +2,12 @@
             min-height: 100vh;
             font-family: Poppins, sans-serif !important;
             line-height: 24px !important;
-
+             scroll-behavior: smooth; 
 
         }
      
         
-        .navbar-blur {
+        .home {
           background-image: url(../img/home3.jpg);
           background-size: cover;
           background-position: center;
