@@ -1,8 +1,9 @@
 # Movies Website
 
 A modern, responsive movies website built with HTML, TailwindCSS, and Font Awesome. This project showcases current and upcoming movies with a clean, user-friendly interface.
+<img width="1419" height="771" alt="Screenshot 2025-08-24 at 12 41 47 PM" src="https://github.com/user-attachments/assets/67883c00-9707-462a-ba1a-f11a03ed3f6b" />
 
-![Movies Website Preview](./img/home1.jpg)
+
 
 ## Features
 
